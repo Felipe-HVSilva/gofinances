@@ -24,6 +24,7 @@ import {
 } from "./styles";
 import { categories } from "../../utils/categories";
 import { useFocusEffect } from "@react-navigation/native";
+import { useAuth } from "../../hooks/auth";
 
 interface TransactionData {
   type: "up" | "down";
@@ -49,6 +50,8 @@ export function Resume() {
     []
   );
 
+  const { user } = useAuth();
+
   const theme = useTheme();
 
   function handleDateChange(action: "next" | "prev") {
@@ -63,7 +66,7 @@ export function Resume() {
 
   async function loadData() {
     setIsLoading(true);
-    const dataKey = "@gofinances:transactions";
+    const dataKey = `@gofinances:transactions_user:${user.id}`;
     const response = await AsyncStorage.getItem(dataKey);
     const responseFormatted = response ? JSON.parse(response) : [];
 
@@ -73,7 +76,6 @@ export function Resume() {
         new Date(expensive.date).getMonth() === selectedDate.getMonth() &&
         new Date(expensive.date).getFullYear === selectedDate.getFullYear
     );
-    console.log(expensives);
 
     const expensivesTotal = expensives.reduce(
       (acc: number, expensive: TransactionData) => {
