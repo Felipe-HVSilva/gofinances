@@ -1,12 +1,13 @@
 
+
 # GoFinances
 
 Um aplicativo mobile para controlar suas finanças, seus gastos e suas receitas
 
-<p>
-  <img src="https://user-images.githubusercontent.com/70115990/178858662-d25b9607-8040-469a-b455-a1865b939965.mp4"/>
-</p>
 
+## Screenshots
+
+![App Screenshot](https://user-images.githubusercontent.com/70115990/178858662-d25b9607-8040-469a-b455-a1865b939965.mp4)
 
 ## Variáveis de Ambiente
 
