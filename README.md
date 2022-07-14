@@ -3,7 +3,9 @@
 
 Um aplicativo mobile para controlar suas finanças, seus gastos e suas receitas
 
-[Preview](https://user-images.githubusercontent.com/70115990/178857955-fe30580a-7366-4bbd-8b82-2772bf4ea233.mp4)
+<p>
+  <img src="https://user-images.githubusercontent.com/70115990/178858662-d25b9607-8040-469a-b455-a1865b939965.mp4"/>
+</p>
 
 
 ## Variáveis de Ambiente
